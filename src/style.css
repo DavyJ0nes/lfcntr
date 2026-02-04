@@ -117,28 +117,6 @@ body {
 	transform: scale(0.995);
 }
 
-.zone-label {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	font-family: "Space Grotesk", system-ui, sans-serif;
-	font-size: clamp(1.25rem, 3.5vw, 2.5rem);
-	font-weight: 600;
-	letter-spacing: 0.08em;
-	color: rgba(0, 0, 0, 0.55);
-	text-transform: uppercase;
-	pointer-events: none;
-	user-select: none;
-}
-
-.zone-up .zone-label {
-	top: clamp(12px, 3vw, 24px);
-}
-
-.zone-down .zone-label {
-	bottom: clamp(12px, 3vw, 24px);
-}
-
 .menu-button {
 	position: absolute;
 	top: 50%;
