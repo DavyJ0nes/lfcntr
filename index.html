@@ -2,7 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+		<link rel="icon" href="./life-ring-solid-full.svg">
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>life-counter</title>
 	</head>
@@ -10,20 +11,63 @@
 		<div id="app">
 			<div class="game">
 				<div class="player player-1">
-					<div class="zone zone-up"></div>
+					<div class="zone zone-up"><span class="zone-label">+</span></div>
 					<div class="life-display">
 						<div class="life-display-count"></div>
-						<div class="life-display-heart">♡</div>
+						<img class="life-display-heart" src="" alt="Life">
 					</div>
-					<div class="zone zone-down"></div>
+					<div class="zone zone-down"><span class="zone-label">−</span></div>
 				</div>
 				<div class="player player-2">
-					<div class="zone zone-up"></div>
+					<div class="zone zone-up"><span class="zone-label">+</span></div>
 					<div class="life-display">
 						<div class="life-display-count"></div>
-						<div class="life-display-heart">♡</div>
+						<img class="life-display-heart" src="" alt="Life">
 					</div>
-					<div class="zone zone-down"></div>
+					<div class="zone zone-down"><span class="zone-label">−</span></div>
+				</div>
+				<div class="split-line" aria-hidden="true"></div>
+				<button class="menu-button" type="button" aria-label="Open settings">⚙︎</button>
+				<div class="menu" role="dialog" aria-modal="true" aria-label="Settings">
+					<div class="menu-panel">
+						<h2 class="menu-title">Settings</h2>
+						<div class="menu-row">
+							<label for="starting-life">Starting life</label>
+							<input id="starting-life" type="number" min="1" max="999" step="1" value="20">
+						</div>
+						<div class="menu-row menu-row--stack">
+							<span>Player 1 color</span>
+							<div class="palette" data-player="p1" aria-label="Player 1 color">
+								<button class="palette-swatch" type="button" data-color="#69d88a" aria-label="Green"></button>
+								<button class="palette-swatch" type="button" data-color="#a48bff" aria-label="Purple"></button>
+								<button class="palette-swatch" type="button" data-color="#ff6b7a" aria-label="Red"></button>
+								<button class="palette-swatch" type="button" data-color="#ff9a5f" aria-label="Orange"></button>
+								<button class="palette-swatch" type="button" data-color="#6da8ff" aria-label="Blue"></button>
+								<button class="palette-swatch" type="button" data-color="#ffd66e" aria-label="Yellow"></button>
+								<button class="palette-swatch" type="button" data-color="#60656f" aria-label="Dark grey"></button>
+								<button class="palette-swatch" type="button" data-color="#b8bcc4" aria-label="Light grey"></button>
+								<button class="palette-swatch" type="button" data-color="#8fc7a2" aria-label="Sage green"></button>
+							</div>
+						</div>
+						<div class="menu-row menu-row--stack">
+							<span>Player 2 color</span>
+							<div class="palette" data-player="p2" aria-label="Player 2 color">
+								<button class="palette-swatch" type="button" data-color="#69d88a" aria-label="Green"></button>
+								<button class="palette-swatch" type="button" data-color="#a48bff" aria-label="Purple"></button>
+								<button class="palette-swatch" type="button" data-color="#ff6b7a" aria-label="Red"></button>
+								<button class="palette-swatch" type="button" data-color="#ff9a5f" aria-label="Orange"></button>
+								<button class="palette-swatch" type="button" data-color="#6da8ff" aria-label="Blue"></button>
+								<button class="palette-swatch" type="button" data-color="#ffd66e" aria-label="Yellow"></button>
+								<button class="palette-swatch" type="button" data-color="#60656f" aria-label="Dark grey"></button>
+								<button class="palette-swatch" type="button" data-color="#b8bcc4" aria-label="Light grey"></button>
+								<button class="palette-swatch" type="button" data-color="#8fc7a2" aria-label="Sage green"></button>
+							</div>
+						</div>
+						<div class="menu-actions">
+							<button class="menu-close" type="button">Cancel</button>
+							<button class="menu-apply" type="button">Apply</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
